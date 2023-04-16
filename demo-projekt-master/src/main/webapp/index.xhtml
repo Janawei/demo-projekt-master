@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="/WEB-INF/template/default.xhtml"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:h="http://java.sun.com/jsf/html">
+
+    <ui:define name="content">
+
+        <h:panelGroup id="state">
+            <p >Die Lampe ist #{java2NodeRedLampAdapter.state ? "an" : "aus"}</p>
+        </h:panelGroup>
+        <h1>testetst </h1>
+        Für die Beispiele das Menü benutzen.
+
+    </ui:define>
+    <ui:define name="rechts">
+
+    </ui:define>
+    <ui:define name="footer">
+
+
+
+        <p:commandButton id= "on" value="An" actionListener="#{java2NodeRedLampAdapter.switchOn()}" /> <br/>
+        <br/>
+
+        <p:commandButton id= "off" value="Aus" actionListener="#{java2NodeRedLampAdapter.switchOff()}" /> <br/>
+        <br/>
+
+
+        <h:form>
+            <p:inputText id="intensitaet" binding="#{input}"/>
+            <br/>
+            <h:commandButton value="Intensity" action="#{java2NodeRedLampAdapter.setIntensity(input.value)}"/>
+
+        </h:form>
+        <br/>
+        <br/>
+        <br/>
+
+        <h:form>
+            <p:inputText id="sda" binding="#{input2}"/>
+            <br/>
+            <h:commandButton value="Farbe" action="#{java2NodeRedLampAdapter.setColorHelp(input2.value)}"/>
+
+        </h:form>
+
+
+
+
+
+
+
+
+    </ui:define>
+
+
+</ui:composition>

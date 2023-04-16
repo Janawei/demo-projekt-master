@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="seDemo:war">
+    <output-path>$PROJECT_DIR$/demo-projekt-master/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>seDemo</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="seDemo.war">
+      <element id="artifact" artifact-name="seDemo:war exploded" />
+    </root>
+  </artifact>
+</component>
